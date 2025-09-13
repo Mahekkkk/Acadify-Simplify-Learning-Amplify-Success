@@ -1,0 +1,200 @@
+/* profile.css - Fixed avatar positioning */
+/* Color Variables */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --primary: #2C3D73;
+    --primary-hover: #1b2751;
+    --secondary: #7CAADC;
+    --accent: #FFD372;
+    --accent-hover: #F15B42;
+    --background: #FDF6FA;
+    --text-color: #2C3D73;
+    --text-light: #5a6a8a;
+    --card-bg: #ffffff;
+    --card-shadow: 0 2px 8px rgba(44, 61, 115, 0.1);
+}
+.page-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+/* Base Styles */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 4rem);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Profile Card */
+.profile-card {
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(44, 61, 115, 0.1);
+    margin-top: 60px; /* Added to prevent overlap */
+}
+
+.profile-header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+    height: 120px; /* Fixed height */
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.profile-avatar-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: absolute;
+    top: -50px; /* Half outside the container */
+}
+
+.profile-details {
+    padding: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+
+/* Rest of your existing CSS remains the same */
+.detail-row {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(44, 61, 115, 0.08);
+    align-items: center;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    width: 150px;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.detail-value {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--text-color);
+    word-break: break-word;
+}
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-hover);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+
+    
+    .profile-card {
+        margin-top: 50px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .detail-label {
+        width: 100%;
+    }
+    
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+        top: -40px;
+    }
+    
+    .profile-details {
+        padding-top: 50px;
+    }
+}

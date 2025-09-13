@@ -1,0 +1,63 @@
+:root {
+    --primary: #4a90e2;
+    --dark: #1f2d3d;
+    --light: #f9f9f9;
+    --text: #333;
+    --footer-bg: #f1f1f1;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    color: var(--text);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #dbe8ff;
+}
+
+.site-footer {
+    background-color: var(--footer-bg);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 3rem;
+    border-top: 1px solid #ccc;
+}
+
+.main-content {
+    padding: 2rem;
+}
